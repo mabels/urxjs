@@ -9,3 +9,5 @@
 
 urxjs is a micro rxjs implementation with a pluggable abstract-rx binding
 
+thx travis
+
