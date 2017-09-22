@@ -1,0 +1,46 @@
+{
+  "name": "urxjs",
+  "version": "1.0.0",
+  "description": "urxjs micro rxjs implementation with a pluggable abstract-rx",
+  "main": "./dist/lib/abstract-rx.js",
+  "types": "./dist/lib/abstract-rx.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "lint": "tslint --project tsconfig.json",
+    "pretest": "npm run build",
+    "test": "mocha dist/test/*-test.js",
+    "prepare": "npm run lint && npm run clean && npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mabels/urxjs"
+  },
+  "license": "AFL-2.0",
+  "bugs": {
+    "url": "https://github.com/mabels/urxjs/issues"
+  },
+  "homepage": "https://github.com/mabels/urxjs#readme",
+  "devDependencies": {
+    "@types/chai": ">=3.4.33",
+    "@types/mocha": ">=2.2.33",
+    "chai": ">=3.5.0",
+    "mocha": ">=3.2.0",
+    "rimraf": ">=2.5.2",
+    "tslint": ">=3.11.0",
+    "typescript": ">=2.5.1",
+    "rxjs": "^5.4.3",
+    "cz-conventional-changelog": ">=1.1.6"
+  },
+  "dependencies": {
+  },
+  "publishConfig": {
+    "tag": "next"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
